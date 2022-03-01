@@ -1,23 +1,16 @@
 use std::io;
 use rand::{thread_rng, Rng};
-
-
-
 fn main() {
     // the point of the game is to make the user guess a number
     // number is random generated
     // ask user for number
     // check against the randomly generated number
     let mut rng = thread_rng();
-    let rand_num: i32 = rng.gen_range(1..101);
-    println!("The test random {}", rand_num);
-  
+    let rand_num: i32 = rng.gen_range(1..101);  
 
     // while the gueses are not equal
     loop {
-
         // continue to read from input
-        
         // read the input of the user
         println!("Please input a number");  
         let user_num = reading_integer(); 
@@ -33,7 +26,6 @@ fn main() {
 
         println!("Please guess again");
         println!("Your guess is {}", user_num);
-        println!("The random number is {}", rand_num);
     };
     println!("Congrats you guessed the number {} correctly", rand_num);
     
